@@ -1,0 +1,200 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to left bottom, #ffeb6b, #b5f288, #69f1b7, #00e8e4, #2adaff, #5aceff, #8ebeff, #b9adf9, #d99be6, #f288c7, #ff799f, #ff7373);
+}
+
+:hover {
+    cursor: pointer;
+}
+
+.container {
+    width: 800px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-wrap {
+    width: 250px;
+    padding: 30px;
+}
+
+.icon {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.icon-wrap:nth-of-type(3) {
+    width: 280px;
+}
+
+.icon-wrap:nth-of-type(2) {
+    border-radius: 20px;
+}
+
+.icon path {
+    fill: #510080;
+    stroke-width: 3;
+    stroke: #510080;
+}
+
+.container .house path {
+    stroke-width: 1;
+}
+
+rect {
+    fill: #510080;
+    stroke-width: 3;
+    stroke: #510080;
+}
+
+.brain path {
+    stroke-width: 1;
+}
+
+
+.brain path, .chart path, .house path {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+}
+
+.brain:hover, .brain:hover path {
+    animation: animate-brain 2s linear forwards;
+}
+
+@keyframes animate-brain {
+    0% {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 1000;
+        width: 90%;
+    }
+    10% {
+        stroke: lightcoral;
+    }
+    40% {
+        width: 95%;
+    }
+    80% {
+        width: 70%;
+    }
+    100% {
+        stroke-dasharray: 3464;
+        width: 99%;
+        stroke-width: 15;
+        stroke: lightcoral;
+    }
+}
+
+.chart:hover, .chart:hover path {
+    animation: animate-chart 1.5s linear forwards;
+}
+
+@keyframes animate-chart {
+    0% {
+        stroke-dasharray: 1500;
+        stroke-dashoffset: 1500;
+    }
+    40% {
+        stroke-dashoffset: 1500;
+    }
+    80% {
+        stroke-dashoffset: 3500;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 3500;
+        fill: #fdff90;
+    }
+}
+
+.chart:hover rect {
+    animation: animate-chart-rect 1.5s linear forwards;
+}
+
+@keyframes animate-chart-rect {
+    0% {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+    }
+    40% {
+        stroke-dashoffset: 1500;
+    }
+    80% {
+        stroke-dashoffset: 3500;
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 3500;
+        fill: #0084ff;
+    }
+}
+
+.house:hover, .house:hover path {
+    animation: animate-house 4s ease-in-out;
+}
+
+@keyframes animate-house {
+    0% {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 500;
+        width: 92%;
+        stroke: lightcoral;
+    }
+    10% {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 501;
+        width: 90%;
+    }
+    20% {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 500;
+        width: 92%;
+    }
+    30% {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 501;
+        width: 90%;
+    }
+    40% {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 500;
+        width: 92%;
+    }
+    50% {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 501;
+        width: 90%;
+    }
+    60% {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 500;
+        width: 92%;
+    }
+    70% {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 501;
+        width: 90%;
+    }
+    80% {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 500;
+        width: 92%;
+        stroke: lightcoral;
+    }
+    90% {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 501;
+        width: 90%;
+    }
+    100% {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 500;
+        width: 92%;
+    }
+}
+
+
